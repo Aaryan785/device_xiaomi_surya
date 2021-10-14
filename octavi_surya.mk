@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common Octavi stuff.
-$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_SOONG_NAMESPACES += \
 $(LOCAL_PATH) \
@@ -31,10 +31,9 @@ hardware/qcom-caf/sm8150
 WITH_GAPPS := true
 PRODUCT_BOARD_PLATFORM := sm6150
 PRODUCT_USES_QCOM_HARDWARE := true
-OCTAVI_BUILD_TYPE := Official
-OCTAVI_DEVICE_MAINTAINER := Tushar Bharti
+AOSP_BUILD_TYPE := Unofficial
 
-PRODUCT_NAME := octavi_surya
+PRODUCT_NAME := aosp_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3 NFC
